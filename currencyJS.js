@@ -44,8 +44,10 @@
         var chunks = [];
 
         for (var i = th.length; i > 0; i -= 3) {
+
             chunks.unshift(th.substring(i, i - 3));
         }
+
         return  chunks.join(thousand) + (dec ? decimal + dec : "");
     };
 
@@ -54,10 +56,12 @@
      *   Return a formatted value
      */
     currencyJS.format = function(number, currency) {
+
         //Retrieve the right currency
         var currency = this.settings.currencies[currency];
 
         if(!currency) {
+
             throw new Error("Currency not valid");
         }
 
@@ -65,12 +69,34 @@
         var value = parseFloat(number);
 
         if(isNaN(value)) {
+
             throw new Error("Value not valid");
         }
 
         return (number < 0 ? "-" : "") + currency.format.replace('%s', currency.symbol).replace('%v', formatNumber(Math.abs(value), currency.thousand, currency.decimal));
     };
 
+
+    /*
+     *   Return a formatted value
+     */
+    currencyJS.unformat = function(formatNumber, currency) {
+
+        //Retrieve the right currency
+        var currency = this.settings.currencies[currency];
+
+        if(!currency) {
+
+            throw new Error("Currency not valid");
+        }
+
+        formatNumber = formatNumber
+            .replace(currency.symbol, "")
+            .replace(currency.thousand, "")
+            .replace(currency.decimal, ".");
+
+        return parseFloat(formatNumber);
+    };
 
     return currencyJS;
 }));

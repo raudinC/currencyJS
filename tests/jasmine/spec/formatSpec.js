@@ -21,5 +21,10 @@ describe('checking format function', function(){
         expect( currencyJS.format(0, "EUR") ).toBe( '0€' );
     });
 
+
+    it('unformat number', function(){
+        expect( currencyJS.unformat(currencyJS.format(-2252.2, "EUR"), "EUR")).toBe(-2252.2);
+        expect( currencyJS.unformat(currencyJS.format(2252.2, "USD"), "USD")).toBe(2252.2);
+    });
 });
 
