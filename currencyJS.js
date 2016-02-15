@@ -29,6 +29,30 @@
                 format : "%v%s",    // output: %s = symbol, %v = value
                 decimal : ",",		// decimal point separator
                 thousand : " "		// thousands separator
+            },
+            "GBP" : {
+                symbol : "\u00A3",  //symbol
+                format : "%v%s",    // output: %s = symbol, %v = value
+                decimal : ",",		// decimal point separator
+                thousand : " "		// thousands separator
+            },
+            "CAD" : {
+                symbol : "$",       //symbol
+                format : "%s%v",    // output: %s = symbol, %v = value
+                decimal : ".",		// decimal point separator
+                thousand : ","		// thousands separator
+            },
+            "JPY" : {
+                symbol : "\u00A5",  //symbol
+                format : "%v%s",    // output: %s = symbol, %v = value
+                decimal : ".",		// decimal point separator
+                thousand : ","		// thousands separator
+            },
+            "INR" : {
+                symbol : "\u20B9",  //symbol
+                format : "%v%s",    // output: %s = symbol, %v = value
+                decimal : ".",		// decimal point separator
+                thousand : ","		// thousands separator
             }
         }
     };
