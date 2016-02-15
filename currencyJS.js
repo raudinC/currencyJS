@@ -18,13 +18,13 @@
 
     currencyJS.settings = {
         currencies : {
-            "dollar" : {
+            "USD" : {
                 symbol : "$",       //symbol
                 format : "%s%v",    // output: %s = symbol, %v = value
                 decimal : ".",		// decimal point separator
                 thousand : ","		// thousands separator
             },
-            "euro" : {
+            "EUR" : {
                 symbol : "€",       //symbol
                 format : "%v%s",    // output: %s = symbol, %v = value
                 decimal : ",",		// decimal point separator

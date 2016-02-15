@@ -26,12 +26,12 @@ require(['currencyJS'], function(currencyJS) {});
 ### Format
 
 ```
-currencyJS.format(2252.25, "dollar"); //$2,252.25
+currencyJS.format(2252.25, "USD"); //$2,252.25
 ```
 
 Valid currencies: 
 
-- dollar
+- EUR
 
-- euro
+- USD
 
