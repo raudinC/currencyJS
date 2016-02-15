@@ -17,5 +17,9 @@ describe('checking format function', function(){
         expect( function(){ currencyJS.format(10000, "unknow") } ).toThrow(new Error("Currency not valid"));
     });
 
+    it('should handle 0', function(){
+        expect( currencyJS.format(0, "euro") ).toBe( '0€' );
+    });
+
 });
 

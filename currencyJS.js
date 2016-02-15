@@ -64,7 +64,7 @@
         //Check number is valid
         var value = parseFloat(number);
 
-        if(!value) {
+        if(isNaN(value)) {
             throw new Error("Value not valid");
         }
 
